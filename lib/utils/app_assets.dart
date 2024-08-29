@@ -1,0 +1,57 @@
+// ignore_for_file: prefer_single_quotes
+class Assets {
+  Assets._();
+
+  /// Assets for imagesAvatar
+  /// assets/images/avatar.svg
+  static const String imagesAvatar = "assets/images/avatar.svg";
+
+  /// Assets for imagesAvatar2
+  /// assets/images/avatar2.svg
+  static const String imagesAvatar2 = "assets/images/avatar2.svg";
+
+  /// Assets for imagesBalance
+  /// assets/images/balance.svg
+  static const String imagesBalance = "assets/images/balance.svg";
+
+  /// Assets for imagesCardBackground
+  /// assets/images/card_background.svg
+  static const String imagesCardBackground =
+      "assets/images/card_background.svg";
+
+  /// Assets for imagesDashboard
+  /// assets/images/dashboard.svg
+  static const String imagesDashboard = "assets/images/dashboard.svg";
+
+  /// Assets for imagesExpenses
+  /// assets/images/expenses.svg
+  static const String imagesExpenses = "assets/images/expenses.svg";
+
+  /// Assets for imagesIncome
+  /// assets/images/income.svg
+  static const String imagesIncome = "assets/images/income.svg";
+
+  /// Assets for imagesLogout
+  /// assets/images/logout.svg
+  static const String imagesLogout = "assets/images/logout.svg";
+
+  /// Assets for imagesMyInvestment
+  /// assets/images/my_investment.svg
+  static const String imagesMyInvestment = "assets/images/my_investment.svg";
+
+  /// Assets for imagesMyTransaction
+  /// assets/images/my_transaction.svg
+  static const String imagesMyTransaction = "assets/images/my_transaction.svg";
+
+  /// Assets for imagesSettings
+  /// assets/images/settings.svg
+  static const String imagesSettings = "assets/images/settings.svg";
+
+  /// Assets for imagesStatistics
+  /// assets/images/statistics.svg
+  static const String imagesStatistics = "assets/images/statistics.svg";
+
+  /// Assets for imagesWallet amount
+  /// assets/images/wallet amount.svg
+  static const String imagesWalletamount = "assets/images/wallet amount.svg";
+}
