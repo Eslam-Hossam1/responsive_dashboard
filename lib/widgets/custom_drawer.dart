@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
+import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_assets.dart';
 import 'package:responsive_dashboard/widgets/active_and_inactive_drawer_item.dart';
 import 'package:responsive_dashboard/widgets/drawer_items_sliver_list.dart';
@@ -24,9 +25,11 @@ class CustomDrawer extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: UserInfoListTile(
-                  image: Assets.imagesAvatar3,
-                  title: "Lekan Okeowo",
-                  subTitle: "demo@gmail.com"),
+                userInfoModel: UserInfoModel(
+                    image: Assets.imagesAvatar3,
+                    title: "Lekan Okeowo",
+                    subTitle: "demo@gmail.com"),
+              ),
             ),
           ),
           SliverToBoxAdapter(
