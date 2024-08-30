@@ -11,44 +11,55 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: UserInfoListTile(
-              image: Assets.imagesAvatar3,
-              title: "Lekan Okeowo",
-              subTitle: "demo@gmail.com"),
-        ),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 8,
+    return Container(
+      color: const Color(0xffFFFFFF),
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
           ),
-        ),
-        DrawerItemsSliverList(),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              Expanded(
-                  child: SizedBox(
-                height: 8,
-              )),
-              InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                      image: Assets.imagesSettings, text: "System Settings")),
-              SizedBox(
-                height: 8,
-              ),
-              InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                      image: Assets.imagesLogout, text: "Logout Account")),
-              SizedBox(
-                height: 48,
-              )
-            ],
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: UserInfoListTile(
+                  image: Assets.imagesAvatar3,
+                  title: "Lekan Okeowo",
+                  subTitle: "demo@gmail.com"),
+            ),
           ),
-        )
-      ],
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
+          ),
+          DrawerItemsSliverList(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(
+                    child: SizedBox(
+                  height: 8,
+                )),
+                InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                        image: Assets.imagesSettings, text: "System Settings")),
+                SizedBox(
+                  height: 8,
+                ),
+                InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                        image: Assets.imagesLogout, text: "Logout Account")),
+                SizedBox(
+                  height: 48,
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

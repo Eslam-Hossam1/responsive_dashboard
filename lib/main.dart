@@ -11,8 +11,12 @@ class ResponsiveDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme:
-          ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.white)),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.white,
+        ),
+        scaffoldBackgroundColor: const Color(0xffF7F9FA),
+      ),
       debugShowCheckedModeBanner: false,
       home: const DashboardView(),
     );
