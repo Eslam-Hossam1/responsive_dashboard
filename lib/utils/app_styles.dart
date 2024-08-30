@@ -19,6 +19,12 @@ abstract class AppStyles {
     fontSize: 16,
     color: Color(0xFF064061),
   );
+  static const TextStyle textStyleBold16 = TextStyle(
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    color: Color(0xFF4EB7F2),
+  );
   static const TextStyle textStyleSemiBold20 = TextStyle(
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
