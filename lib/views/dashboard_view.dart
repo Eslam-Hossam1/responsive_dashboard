@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/adaptive_layout_widget.dart';
 import 'package:responsive_dashboard/widgets/dashboard_desktop_layout.dart';
+import 'package:responsive_dashboard/widgets/my_card_section.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -9,7 +10,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AdaptiveLayout(
-          mobileLayout: (context) => const SizedBox(),
+          mobileLayout: (context) => const MyCardSection(),
           tabletLayout: (context) => const SizedBox(),
           desktopLayout: (context) => const DashboardDesktopLayout()),
     );

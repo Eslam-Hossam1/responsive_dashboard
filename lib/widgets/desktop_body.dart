@@ -22,7 +22,12 @@ class DesktobBody extends StatelessWidget {
             height: 24,
           ),
         ),
-        SliverToBoxAdapter(child: QuickInvoicesSection())
+        SliverToBoxAdapter(child: QuickInvoicesSection()),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 32,
+          ),
+        )
       ],
     );
   }
