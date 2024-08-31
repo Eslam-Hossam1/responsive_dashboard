@@ -11,14 +11,16 @@ class RightPartSection extends StatelessWidget {
     return const Padding(
       padding: const EdgeInsets.only(top: 40, right: 32),
       child: CustomBackgroundContainer(
-          widget: Column(
-        children: [
-          MyCardSection(),
-          Divider(
-            color: Color(0xffF1F1F1),
-            height: 40,
+          widget: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: MyCardSection()),
+          SliverToBoxAdapter(
+            child: Divider(
+              color: Color(0xffF1F1F1),
+              height: 40,
+            ),
           ),
-          TransactionHistorySection()
+          SliverToBoxAdapter(child: TransactionHistorySection())
         ],
       )),
     );
