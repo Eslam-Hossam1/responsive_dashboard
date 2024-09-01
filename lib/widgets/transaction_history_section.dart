@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/widgets/transaction_history_header.dart';
 import 'package:responsive_dashboard/widgets/transaction_items_list_view.dart';
 
@@ -20,6 +21,9 @@ class TransactionHistorySection extends StatelessWidget {
           style: AppStyles.textStyleRegular16.copyWith(
             color: const Color(0xffaaaaaa),
           ),
+        ),
+        const SizedBox(
+          height: 16,
         ),
         const TransactionItemsListView()
       ],

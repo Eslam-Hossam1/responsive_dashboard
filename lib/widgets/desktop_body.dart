@@ -9,24 +9,18 @@ class DesktobBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 40,
-          ),
+    return const Column(
+      children: [
+        SizedBox(
+          height: 40,
         ),
-        SliverToBoxAdapter(child: AllExpensesSection()),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 24,
-          ),
+        AllExpensesSection(),
+        SizedBox(
+          height: 24,
         ),
-        SliverToBoxAdapter(child: QuickInvoicesSection()),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 32,
-          ),
+        QuickInvoicesSection(),
+        SizedBox(
+          height: 32,
         )
       ],
     );

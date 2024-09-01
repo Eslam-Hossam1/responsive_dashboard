@@ -15,11 +15,12 @@ class DashboardDesktopLayout extends StatelessWidget {
         SizedBox(
           width: 32,
         ),
-        Expanded(flex: 3, child: DesktobBody()),
+        Expanded(flex: 3, child: SingleChildScrollView(child: DesktobBody())),
         SizedBox(
           width: 24,
         ),
-        Expanded(flex: 2, child: RightPartSection())
+        Expanded(
+            flex: 2, child: SingleChildScrollView(child: RightPartSection()))
       ],
     );
   }
