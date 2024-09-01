@@ -10,18 +10,21 @@ class DashboardTabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(child: CustomDrawer()),
         SizedBox(
           width: 24,
         ),
         Expanded(
-            flex: 2,
-            child: SingleChildScrollView(
-                child: Column(
+          flex: 2,
+          child: SingleChildScrollView(
+            child: Column(
               children: [
-                DesktobBody(),
+                Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                  child: DesktobBody(),
+                ),
                 SizedBox(
                   height: 24,
                 ),
@@ -31,7 +34,12 @@ class DashboardTabletLayout extends StatelessWidget {
                 ),
                 IncomeSection()
               ],
-            )))
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 24,
+        ),
       ],
     );
   }

@@ -11,9 +11,6 @@ class DesktobBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SizedBox(
-          height: 40,
-        ),
         AllExpensesSection(),
         SizedBox(
           height: 24,
