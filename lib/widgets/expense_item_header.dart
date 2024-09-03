@@ -13,28 +13,36 @@ class ExpenseItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          padding: const EdgeInsets.all(14),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: isSelected
-                ? Colors.white.withOpacity(.1)
-                : const Color(0xffFAFAFA),
+        Flexible(
+          child: Container(
+            height: 60,
+            width: 60,
+            //     padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isSelected
+                  ? Colors.white.withOpacity(.1)
+                  : const Color(0xffFAFAFA),
+            ),
+            //   ConstrainedBox(constraints: BoxConstraints(),child: Container(),)
+
+            child: isSelected
+                ? Center(
+                    child: SvgPicture.asset(
+                      image,
+                      colorFilter:
+                          const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    ),
+                  )
+                : Center(child: SvgPicture.asset(image)),
           ),
-          child: isSelected
-              ? SvgPicture.asset(
-                  image,
-                  colorFilter:
-                      const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                )
-              : SvgPicture.asset(image),
         ),
         const Spacer(),
         Transform.rotate(
             angle: -1.5707963268 * 2,
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: isSelected ? Colors.white : Color(0xff064061),
+              color: isSelected ? Colors.white : const Color(0xff064061),
             )),
       ],
     );

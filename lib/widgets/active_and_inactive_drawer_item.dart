@@ -12,10 +12,9 @@ class InActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.text,
-        style: AppStyles.textStyleRegular16,
+        style: AppStyles.textStyleRegular16(context),
       ),
     );
-    ;
   }
 }
 
@@ -28,7 +27,7 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.text,
-        style: AppStyles.textStyleBold16,
+        style: AppStyles.textStyleBold16(context),
       ),
       trailing: Container(
         decoration: const BoxDecoration(

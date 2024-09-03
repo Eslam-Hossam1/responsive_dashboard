@@ -11,56 +11,55 @@ class CreditCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: const Color(0xff4EB7F2),
+        decoration: ShapeDecoration(
           image: const DecorationImage(
-              image: AssetImage(Assets.imagesCardBackground)),
+              fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
+          color: const Color(0xFF4EB7F2),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               contentPadding:
-                  const EdgeInsets.only(top: 20, left: 31, right: 69 - 24),
-              title: Text(
-                "Name card",
-                style:
-                    AppStyles.textStyleRegular16.copyWith(color: Colors.white),
-              ),
+                  const EdgeInsets.only(left: 31, right: 42, top: 16),
+              title: Text('Name card',
+                  style: AppStyles.textStyleRegular16(context).copyWith(
+                    color: Colors.white,
+                  )),
               subtitle: Text(
-                "Syah Bandi",
-                style:
-                    AppStyles.textStyleMedium20.copyWith(color: Colors.white),
+                'Syah Bandi',
+                style: AppStyles.textStyleMedium20(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Expanded(child: SizedBox()),
             Padding(
-              padding: const EdgeInsets.only(right: 27),
+              padding: const EdgeInsets.only(right: 48 - 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    "0918 8124 0042 8129",
-                    style: AppStyles.textStyleSemiBold24
-                        .copyWith(color: Colors.white),
-                  ),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  Text(
-                    "12/20 - 124",
-                    style: AppStyles.textStyleRegular16.copyWith(
+                    '0918 8124 0042 8129',
+                    style: AppStyles.textStyleSemiBold24(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
-                  const SizedBox(
-                    height: 27,
-                  )
+                  Text(
+                    '12/20 - 124',
+                    style: AppStyles.textStyleRegular16(context)
+                        .copyWith(color: Colors.white),
+                  ),
                 ],
               ),
-            )
+            ),
+            const Flexible(
+              child: SizedBox(
+                height: 54 - 28,
+              ),
+            ),
           ],
         ),
       ),

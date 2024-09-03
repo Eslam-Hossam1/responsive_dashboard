@@ -48,14 +48,16 @@ class CustomDrawer extends StatelessWidget {
                   height: 8,
                 )),
                 InActiveDrawerItem(
-                    drawerItemModel: DrawerItemModel(
-                        image: Assets.imagesSettings, text: "System Settings")),
+                  drawerItemModel: DrawerItemModel(
+                      image: Assets.imagesSettings, text: "System Settings"),
+                ),
                 SizedBox(
                   height: 8,
                 ),
                 InActiveDrawerItem(
-                    drawerItemModel: DrawerItemModel(
-                        image: Assets.imagesLogout, text: "Logout Account")),
+                  drawerItemModel: DrawerItemModel(
+                      image: Assets.imagesLogout, text: "Logout Account"),
+                ),
                 SizedBox(
                   height: 48,
                 )

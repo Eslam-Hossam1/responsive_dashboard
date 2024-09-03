@@ -13,7 +13,7 @@ class TransactionItemsListView extends StatelessWidget {
     TransactionModel(
         title: "Landing Page project",
         subTitle: "13 Apr, 2022 at 3:30 PM ",
-        price: r"$$2,000",
+        price: r"$2,000",
         isWithdrawal: true),
     TransactionModel(
         title: "Juni Mobile App project",
@@ -23,6 +23,13 @@ class TransactionItemsListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: items
+          .map(
+            (e) => TransactionItem(transactionModel: e),
+          )
+          .toList(),
+    );
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),

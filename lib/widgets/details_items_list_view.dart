@@ -15,6 +15,13 @@ class DetailsItemsListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: items
+          .map(
+            (e) => DetailsItem(detailsItemModel: e),
+          )
+          .toList(),
+    );
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),

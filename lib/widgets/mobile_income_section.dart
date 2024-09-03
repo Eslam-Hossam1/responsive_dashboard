@@ -5,8 +5,8 @@ import 'package:responsive_dashboard/widgets/income_chart.dart';
 import 'package:responsive_dashboard/widgets/income_header.dart';
 import 'package:responsive_dashboard/widgets/income_section_body.dart';
 
-class IncomeSection extends StatelessWidget {
-  const IncomeSection({super.key});
+class MobileIncomeSection extends StatelessWidget {
+  const MobileIncomeSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,8 @@ class IncomeSection extends StatelessWidget {
       widget: Column(
         children: [
           IncomeHeader(),
-          Flexible(
-            child: SizedBox(
-              height: 28,
-            ),
+          SizedBox(
+            height: 28,
           ),
           IncomeSectionBody()
         ],

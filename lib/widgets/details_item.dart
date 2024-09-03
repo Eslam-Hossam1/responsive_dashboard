@@ -12,11 +12,11 @@ class DetailsItem extends StatelessWidget {
       leading: DetailsItemLeadingDot(color: detailsItemModel.color),
       title: Text(
         detailsItemModel.title,
-        style: AppStyles.textStyleRegular16,
+        style: AppStyles.textStyleRegular16(context),
       ),
       trailing: Text(
         detailsItemModel.value,
-        style: AppStyles.textStyleMedium16,
+        style: AppStyles.textStyleMedium16(context),
       ),
     );
   }

@@ -15,7 +15,8 @@ class CustomButton extends StatelessWidget {
           onPressed: () {},
           child: Text(
             text,
-            style: AppStyles.textStyleSemiBold18.copyWith(color: textColor),
+            style: AppStyles.textStyleSemiBold18(context)
+                .copyWith(color: textColor),
           ),
           style: ElevatedButton.styleFrom(
               elevation: 0,

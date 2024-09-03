@@ -16,21 +16,33 @@ class DashboardDesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-            flex: 3,
-            child: SingleChildScrollView(
-                child: Padding(
-              padding: EdgeInsets.only(top: 40.0),
-              child: DesktobBody(),
-            ))),
-        SizedBox(
-          width: 24,
-        ),
-        Expanded(
-            flex: 2,
-            child: SingleChildScrollView(
-                child: Padding(
-                    padding: EdgeInsets.only(top: 40),
-                    child: RightPartSection())))
+          flex: 4,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                        flex: 6,
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 40.0),
+                          child: DesktobBody(),
+                        )),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Expanded(
+                        flex: 4,
+                        child: Padding(
+                            padding: EdgeInsets.only(top: 40),
+                            child: RightPartSection()))
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

@@ -7,12 +7,13 @@ class CreditCardsPageView extends StatelessWidget {
   final PageController pageController;
   @override
   Widget build(BuildContext context) {
-    return ExpandablePageView.builder(
+    return ExpandablePageView(
       controller: pageController,
-      itemCount: 3,
-      itemBuilder: (context, index) {
-        return const CreditCard();
-      },
+      scrollDirection: Axis.horizontal,
+      children: List.generate(
+        3,
+        (index) => const CreditCard(),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/desktop_body.dart';
 import 'package:responsive_dashboard/widgets/income_section.dart';
+import 'package:responsive_dashboard/widgets/mobile_income_section.dart';
 import 'package:responsive_dashboard/widgets/my_card_and_latest_transaction_section.dart';
 import 'package:responsive_dashboard/widgets/my_card_section.dart';
 
@@ -32,7 +33,7 @@ class DashboardTabletLayout extends StatelessWidget {
                 SizedBox(
                   height: 24,
                 ),
-                IncomeSection()
+                MobileIncomeSection()
               ],
             ),
           ),

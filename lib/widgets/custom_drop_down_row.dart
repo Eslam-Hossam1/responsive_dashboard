@@ -11,15 +11,15 @@ class CustomDrobDownRow extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xffF1F1F1)),
-        color: Color(0xffffffff),
+        border: Border.all(color: const Color(0xffF1F1F1)),
+        color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         children: [
-          const Text(
+          Text(
             "Monthly",
-            style: AppStyles.textStyleMedium16,
+            style: AppStyles.textStyleMedium16(context),
           ),
           const SizedBox(
             width: 18,

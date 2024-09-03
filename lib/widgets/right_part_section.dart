@@ -14,41 +14,13 @@ class RightPartSection extends StatelessWidget {
       padding: const EdgeInsets.only(right: 32),
       child: Column(
         children: [
-          SizedBox(
-            height: 40,
-          ),
           MyCardAndLatestTransactionSection(),
           SizedBox(
             height: 24,
           ),
-          IncomeSection()
+          Expanded(child: IncomeSection())
         ],
       ),
     );
   }
 }
-// CustomScrollView(
-//         slivers: [
-//           SliverToBoxAdapter(
-//             child: SizedBox(
-//               height: 40,
-//             ),
-//           ),
-//           SliverToBoxAdapter(child: MyCardSection()),
-//           SliverToBoxAdapter(
-//             child: Divider(
-//               color: Color(0xffF1F1F1),
-//               height: 40,
-//             ),
-//           ),
-//           SliverToBoxAdapter(child: TransactionHistorySection()),
-//           SliverToBoxAdapter(
-//             child: SizedBox(
-//               height: 24,
-//             ),
-//           ),
-//           SliverToBoxAdapter(
-//             child: IncomeSection(),
-//           )
-//         ],
-//       ),
