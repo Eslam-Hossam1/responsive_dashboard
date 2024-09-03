@@ -12,7 +12,10 @@ class CreditCardsPageView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: List.generate(
         3,
-        (index) => const CreditCard(),
+        (index) => const Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: const CreditCard(),
+        ),
       ),
     );
   }
